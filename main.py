@@ -2,10 +2,13 @@ from time import *
 from tkinter import *
 import os
 
-
-print("Hi there, my name is JARVIS. I'm the text based A.I. this software runs on")
+print("Hey daar, ik ben JARVIS, dit systeem zijn virtuele A.I. assistent")
 print("")
-print("How could i be of service?")
+print("Hoe kan ik u noemen?")
+
+username = input()
+
+print("okay " + username + ". Wat kan ik voor u doen?")
 
 while True:
     if input() == "/list":
@@ -16,9 +19,9 @@ while True:
         print("/date")
         print("/program end")
         print("...")
-        print("more to be added...")
-        print("very well sir a list of commands is being opened for you")
-        print("what can i do for you next?")
+        print("binnenkort meer opties...")
+        print("okay " + username + " een lijst met alle commandos wordt voor u geopent")
+        print("wat kan ik nog meer voor u doen?")
 
     elif input() == "/time" or "/showtime":
         clockwndw = Tk()
@@ -38,8 +41,8 @@ while True:
 
         clock2()
 
-        print("very well sir time is being opened for you")
-        print("what can i do for you next?")
+        print("kay " + username + " de tijd wordt voor u geopent")
+        print("Wat kan ik nog meer voor u doen?")
         clockwndw.mainloop()
 
     elif input() == "/date" or "/showdate":
@@ -58,23 +61,22 @@ while True:
         time_label2.place(y=830, x=1395)
 
         date()
-
-        print("what can i do for you next?")
+        print("okay " + username + " de datum wordt voor u geopent")
+        print("Wat kan ik nog meer voor udoen?")
 
     elif input() == "/program end":
         exit()
 
     elif input() == "/open browser" or "/opera":
         os.startfile("C:/Users/evert/Desktop/Opera GX-browser.lnk")
-        print("very well sir, your browser is being opened for you")
-        print("what can i do for you next?")
+        print("Okay " + username + " Uw browser wordt voor u geopent")
+        print("wat kan ik nog meer voor ik doen?")
 
     elif input() == "/open DC" or "/discord":
         os.startfile("C:/Users/evert/Desktop/Discord.lnk")
-        print("very well sir discord is being opened for you")
-        print("what can i do for you next?")
+        print("Okay " + username + " Discord wordt voor u geopent")
+        print("Wat kan ik nog meer voor u doen?")
 
     else:
-        print("I'm sorry but i dont know what that means.. Maybe try something else?")
-
+        print("Sorry, maar ik weet niet wat dat betekend, kunt u het misschien nog een keer proberen?")
         break
